@@ -5,11 +5,11 @@ import org.joda.time.DateTime;
 import java.util.Collections;
 import java.util.List;
 import java.util.Set;
-
+import ar.edu.unahur.obj2.proveedores.*;
 public class Ota {
 
     private DistribuidorDeTrafico distribuidorDeTrafico;
-
+    private Amadeus amadeus;
     public Ota(DistribuidorDeTrafico distribuidorDeTrafico) {
         this.distribuidorDeTrafico = distribuidorDeTrafico;
     }
@@ -17,6 +17,7 @@ public class Ota {
     public List<Vuelo> buscarVuelos(DateTime fecha, String origen, String destino) {
         String codigoProveedor = distribuidorDeTrafico.proveedor();
         // TODO Implementar
+
         return Collections.emptyList();
     }
 
