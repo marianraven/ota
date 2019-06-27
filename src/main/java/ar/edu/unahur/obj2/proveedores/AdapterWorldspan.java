@@ -13,20 +13,25 @@ public class AdapterWorldspan implements Proveedors{
 
     Worldspan worldspan;
 
+
     public AdapterWorldspan(Worldspan worldspan) {
         this.worldspan = worldspan;
     }
+
     @Override
-    public List<Vuelo> registrarVuelo(DateTime fecha, String origen, String destino) {
+    public List<Vuelo> buscarVuelo(DateTime fecha, String origen, String destino) {
         return worldspan.searchFlights(fecha.getDayOfMonth(),fecha.getMonthOfYear(),fecha.getYear(),origen,destino);
     }
 
     @Override
-    public Boleto reservar(Vuelo vuelo, Set<Pasajero> pasajeros) {
-        return worldspan.bookFlight(vuelo,pasajeros);
+    public Boleto comprar(Vuelo vuelo, Set<Pasajero> pasajeros) {
+        return worldspan.bookFlight(vuelo, pasajeros);
     }
 
-
-
-
+    @Override
+    public String toString() {
+        return "AdapterWorldspan{" +
+                "worldspan=" + worldspan +
+                '}';
+    }
 }

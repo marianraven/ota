@@ -9,7 +9,7 @@ import org.joda.time.DateTime;
 
 
 public interface Proveedors {
-     List<Vuelo>registrarVuelo(DateTime fecha, final String origen, final String destino);
-     Boleto reservar(Vuelo vuelo, Set<Pasajero> pasajeros);
+     List<Vuelo> buscarVuelo(DateTime fecha, String origen,String destino);
+     Boleto comprar(Vuelo vuelo, Set<Pasajero> pasajeros);
 
 }

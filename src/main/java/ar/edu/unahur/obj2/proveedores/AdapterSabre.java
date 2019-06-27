@@ -17,12 +17,19 @@ public class AdapterSabre implements Proveedors {
 
 
     @Override
-    public List<Vuelo> registrarVuelo(DateTime fecha, String origen, String destino) {
+    public List<Vuelo> buscarVuelo(DateTime fecha, String origen, String destino) {
         return sabre.buscar(fecha,origen,destino);
     }
 
     @Override
-    public Boleto reservar(Vuelo vuelo, Set<Pasajero> pasajeros) {
-        return sabre.comprar(vuelo,pasajeros);
+    public Boleto comprar(Vuelo vuelo, Set<Pasajero> pasajeros) {
+        return sabre.comprar(vuelo, pasajeros);
+    }
+
+    @Override
+    public String toString() {
+        return "AdapterSabre{" +
+                "sabre=" + sabre +
+                '}';
     }
 }

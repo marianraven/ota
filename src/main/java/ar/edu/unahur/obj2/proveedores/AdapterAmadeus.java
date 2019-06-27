@@ -16,17 +16,21 @@ public class AdapterAmadeus implements Proveedors {
         this.amadeus = amadeus;
     }
 
+
     @Override
-    public List<Vuelo> registrarVuelo(DateTime fecha, String origen, String destino) {
+    public List<Vuelo> buscarVuelo(DateTime fecha, String origen, String destino) {
         return amadeus.executeSearch(fecha,origen,destino);
     }
 
     @Override
-    public Boleto reservar(Vuelo vuelo, Set<Pasajero> pasajeros) {
+    public Boleto comprar(Vuelo vuelo, Set<Pasajero> pasajeros) {
         return amadeus.executeBook(vuelo, pasajeros);
     }
 
-
-
-
+    @Override
+    public String toString() {
+        return "AdapterAmadeus{" +
+                "amadeus=" + amadeus +
+                '}';
+    }
 }
