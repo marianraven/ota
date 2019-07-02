@@ -41,4 +41,12 @@ public class Sabre {
 
         return new Boleto(vueloAVender, pasajeros);
     }
+
+
+    @Override
+    public String toString() {
+        return "Sabre{" +
+                "vuelos=" + vuelos +
+                '}';
+    }
 }

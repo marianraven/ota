@@ -12,4 +12,5 @@ public interface Proveedors {
      List<Vuelo> buscarVuelo(DateTime fecha, String origen,String destino);
      Boleto comprar(Vuelo vuelo, Set<Pasajero> pasajeros);
 
+
 }

@@ -22,4 +22,13 @@ public class DistribuidorDeTrafico {
     public Proveedors proveedors(){
         return proveedores.get(random.nextInt(proveedores.size()));
     }
+
+
+    @Override
+    public String toString() {
+        return "DistribuidorDeTrafico{" +
+                "random=" + random +
+                ", proveedores=" + proveedores +
+                '}';
+    }
 }

@@ -41,4 +41,10 @@ public class Amadeus {
         return new Boleto(vueloAVender, pasajeros);
     }
 
+    @Override
+    public String toString() {
+        return "Amadeus{" +
+                "vuelos=" + vuelos +
+                '}';
+    }
 }

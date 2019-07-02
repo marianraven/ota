@@ -20,4 +20,12 @@ public class Boleto {
     public Set<Pasajero> getPasajeros() {
         return pasajeros;
     }
+
+    @Override
+    public String toString() {
+        return "Boleto{" +
+                "vuelo=" + vuelo +
+                ", pasajeros=" + pasajeros +
+                '}';
+    }
 }

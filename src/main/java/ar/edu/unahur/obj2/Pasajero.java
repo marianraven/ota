@@ -22,4 +22,13 @@ public class Pasajero {
     public int getEdad() {
         return edad;
     }
+
+    @Override
+    public String toString() {
+        return "Pasajero{" +
+                "nomnbre='" + nomnbre + '\'' +
+                ", apellido='" + apellido + '\'' +
+                ", edad=" + edad +
+                '}';
+    }
 }
